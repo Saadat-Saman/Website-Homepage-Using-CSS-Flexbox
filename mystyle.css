@@ -1,90 +1,137 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: "Open Sans", sans-serif;
-    background-image: linear-gradient(to left, whitesmoke, #ADD8E6);
-}
-header {
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 4px solid #ADD8E6;
-}
-ul {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-}
-ul li a {
-    padding: 0 20px;
-    color: #3a3a3a;
-    text-decoration: none;
-    display: inline-block;
-}
-li a::after {
-    content: '';
-    display: block;
-    height: 4px;
-    width: 0;
-    background: #6495ED;
-    transition:all 0.5s;
-}
-li a:hover::after {
-    width: 100%;
-}
-
-main {
-    display: flex;
-    height: calc(100vh - 100px);
-    justify-content: center;
-    align-items: center;
-}
-.hero-img {
-    max-width: 670px;
-    height: auto;
-}
-.content-left {
-    width: 30%
-}
-main h1 {
-    font-size: 54px;
-    color: #133B4F;
-    text-transform: uppercase;
-}
-main h2 {
-    font-size: 25px;
-    color: #FCA70C;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-}
-main p {
-    font-size: 14px;
-    font-weight: 400;
-    color: #333;
-    line-height: 31.5px;
-    margin: 30px 0;
-}
-.cta {
-    padding: 15px 30px;
-    background-color: #6495ED;
-    color: whitesmoke;
-    border-radius: 50px;
-    border: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.signup-btn {
-    padding: 10px 20px;
-    background-color: #6495ED;
-    color: whitesmoke;
-    border-radius: 50px;
-    border: none;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: "Open Sans", sans-serif;
+        background-image: linear-gradient(to left, whitesmoke, #ADD8E6);
+    }
+    header {
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 4px solid #ADD8E6;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+    }
+    ul li a {
+        padding: 0 20px;
+        color: #3a3a3a;
+        text-decoration: none;
+        display: inline-block;
+    }
+    li a::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 0;
+        background: #6495ED;
+        transition:all 0.5s;
+    }
+    li a:hover::after {
+        width: 100%;
+    }
+    
+    main {
+        display: flex;
+        height: calc(100vh - 100px);
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-img {
+        max-width: 670px;
+        height: auto;
+    }
+    .content-left {
+        width: 30%
+    }
+    main h1 {
+        font-size: 54px;
+        color: #133B4F;
+        text-transform: uppercase;
+    }
+    main h2 {
+        font-size: 25px;
+        color: #FCA70C;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+    main p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        line-height: 31.5px;
+        margin: 30px 0;
+    }
+    .cta {
+        padding: 15px 30px;
+        background-color: #6495ED;
+        color: whitesmoke;
+        border-radius: 50px;
+        border: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .signup-btn {
+        padding: 10px 20px;
+        background-color: #6495ED;
+        color: whitesmoke;
+        border-radius: 50px;
+        border: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .mobile {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    @media screen and (max-width: 768px) {
+        nav {
+            position: static;
+        }
+        nav ul {
+            display: none;
+            width: 100%;
+            background-color: #ADD8E6;
+            position: absolute;
+            top: 100px; 
+            left: 0;
+            right: 0;
+            height: 50vh;
+            text-align:  center;
+        }
+        nav ul li {
+            display: block;
+            margin-top: 5px;
+        }
+        nav ul li a {
+             color: #3a3a3a;
+        }
+        
+        .mobile {
+            color: #6495ED;
+            display: block;
+            font-size: 32px;
+            text-decoration: none;
+        }
+        main {
+            flex-direction: column;
+            height: auto;
+        }
+        .content-left {
+            width: 80%;
+        }
+        .hero-img {
+            width: 80vw;
+        }
+       
+    }
